@@ -508,15 +508,20 @@
     .dshr-summary:empty { display: none; }
     .dshr-summary { margin: 0 0 8px; color: var(--dshr-fg); }
     .dshr-cmd { display: flex; align-items: stretch; border: 1px solid var(--dshr-line); }
+    /* Wraps rather than scrolls: the sidebar is ~300px and a scrollbar across
+       an install command reads as a rendering fault. The copy button is the
+       intended way to take it, so a wrapped line costs nothing. */
     .dshr-cmd code {
-      flex: 1; min-width: 0; overflow-x: auto; white-space: pre;
+      flex: 1; min-width: 0; white-space: pre-wrap; overflow-wrap: anywhere;
       padding: 6px 8px; background: none; border: 0; border-radius: 0;
       font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px;
-      color: var(--dshr-fg);
+      line-height: 1.45; color: var(--dshr-fg);
     }
     .dshr-copy {
-      flex: none; cursor: pointer; border: 0; border-left: 1px solid var(--dshr-line);
-      background: none; color: var(--dshr-muted); font-size: 11px; padding: 0 10px;
+      flex: none; align-self: flex-start; cursor: pointer;
+      border: 0; border-left: 1px solid var(--dshr-line);
+      background: none; color: var(--dshr-muted); font-size: 11px;
+      padding: 7px 10px; white-space: nowrap;
     }
     .dshr-copy:hover { color: var(--dshr-copper); }
     .dshr-copy.is-done { color: var(--dshr-copper); }
