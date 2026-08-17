@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://greasyfork.org/scripts/dsh-plugin-radar"><img alt="Greasy Fork" src="https://img.shields.io/badge/Greasy%20Fork-%E5%AE%89%E8%A3%85-c0561d?style=flat-square"></a>
+  <a href="https://greasyfork.org/scripts/591735-dsh-plugin-radar"><img alt="Greasy Fork" src="https://img.shields.io/badge/Greasy%20Fork-%E5%AE%89%E8%A3%85-c0561d?style=flat-square"></a>
   <a href="dsh-plugin-radar.user.js"><img alt="版本" src="https://img.shields.io/badge/%E7%89%88%E6%9C%AC-1.0.0-241f1a?style=flat-square"></a>
   <a href="LICENSE"><img alt="授权" src="https://img.shields.io/badge/%E6%8E%88%E6%9D%83-MIT-241f1a?style=flat-square"></a>
   <a href="https://dshmarketplace.dev/api/v1/index"><img alt="目录" src="https://img.shields.io/badge/%E7%9B%AE%E5%BD%95-1%2C000%2B%20%E4%B8%AA%E6%8F%92%E4%BB%B6-6b6055?style=flat-square"></a>
@@ -54,7 +54,7 @@ README —— 每个指向目录内插件的链接后面都会跟一个小小的
 1. 先装一个脚本管理器 —— [Tampermonkey](https://www.tampermonkey.net/)、
    [Violentmonkey](https://violentmonkey.github.io/)，Safari 用
    [Userscripts](https://apps.apple.com/app/userscripts/id1463298887)。
-2. **[从 Greasy Fork 安装](https://greasyfork.org/scripts/dsh-plugin-radar)**，
+2. **[从 Greasy Fork 安装](https://greasyfork.org/scripts/591735-dsh-plugin-radar)**，
    或者直接打开 [`dsh-plugin-radar.user.js`](dsh-plugin-radar.user.js) 的 raw 文件，
    管理器会自己弹出安装。
 
@@ -82,7 +82,7 @@ README —— 每个指向目录内插件的链接后面都会跟一个小小的
 | [`/api/v1/index`](https://dshmarketplace.dev/api/v1/index) | 全部条目，五列，一个请求搞定 —— [示例](docs/example-index.json) |
 | [`/api/v1/plugins?q=`](https://dshmarketplace.dev/api/v1/plugins?q=modlens) | 单个插件的完整记录 —— [示例](docs/example-plugin.json) |
 
-`/api/v1/index` 用位置数组返回，为的是小 —— 一千个插件大概 100 KB，压过去 18 KB ——
+`/api/v1/index` 用位置数组返回，为的是小 —— 现在这一千个插件是 113 KB，压过去 22 KB ——
 列名跟着 payload 一起发：
 
 ```json

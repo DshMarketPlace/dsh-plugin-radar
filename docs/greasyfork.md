@@ -1,6 +1,24 @@
-# Submitting to Greasy Fork
+# The Greasy Fork listing
 
-The listing text lives here so it stays versioned with the script.
+**Live at <https://greasyfork.org/scripts/591735-dsh-plugin-radar>** since
+17 August 2026. The listing text lives here so it stays versioned with the
+script.
+
+## What the listing is worth, measured
+
+Greasy Fork script pages are indexable — no `noindex`, self-canonical — but
+author-supplied links are not all equal. On this script's own page:
+
+| Link | |
+| --- | --- |
+| `github.com/DshMarketPlace/dsh-plugin-radar` (in the description) | **dofollow** |
+| `github.com/deepseek-ai/deepseek-harness` (in the description) | **dofollow** |
+| `dshmarketplace.dev` (in the description) | `nofollow` |
+| the `@supportURL` issues link | `nofollow` |
+
+So Greasy Fork appears to run a small trusted-domain allowlist. The listing
+earns brand exposure on an indexable page plus a real link to the repository;
+the site gets its equity one hop later, from the repository's own README.
 
 ## Steps
 

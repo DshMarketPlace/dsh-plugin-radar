@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://greasyfork.org/scripts/dsh-plugin-radar"><img alt="Greasy Fork" src="https://img.shields.io/badge/Greasy%20Fork-install-c0561d?style=flat-square"></a>
+  <a href="https://greasyfork.org/scripts/591735-dsh-plugin-radar"><img alt="Greasy Fork" src="https://img.shields.io/badge/Greasy%20Fork-install-c0561d?style=flat-square"></a>
   <a href="dsh-plugin-radar.user.js"><img alt="Version" src="https://img.shields.io/badge/version-1.0.0-241f1a?style=flat-square"></a>
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-241f1a?style=flat-square"></a>
   <a href="https://dshmarketplace.dev/api/v1/index"><img alt="Catalogue" src="https://img.shields.io/badge/catalogue-1%2C000%2B%20plugins-6b6055?style=flat-square"></a>
@@ -59,7 +59,7 @@ resolve. The card says so instead of printing a command that fails.
 1. Install a userscript manager — [Tampermonkey](https://www.tampermonkey.net/),
    [Violentmonkey](https://violentmonkey.github.io/) or
    [Userscripts](https://apps.apple.com/app/userscripts/id1463298887) for Safari.
-2. **[Install from Greasy Fork](https://greasyfork.org/scripts/dsh-plugin-radar)**,
+2. **[Install from Greasy Fork](https://greasyfork.org/scripts/591735-dsh-plugin-radar)**,
    or open [`dsh-plugin-radar.user.js`](dsh-plugin-radar.user.js) raw and your
    manager will offer to install it.
 
@@ -91,8 +91,8 @@ Both endpoints are public, CORS-open and free to use.
 | [`/api/v1/index`](https://dshmarketplace.dev/api/v1/index) | Every listing, five columns, one request — [example](docs/example-index.json) |
 | [`/api/v1/plugins?q=`](https://dshmarketplace.dev/api/v1/plugins?q=modlens) | The full record for one plugin — [example](docs/example-plugin.json) |
 
-`/api/v1/index` returns positional rows to stay small — about 100 KB for a
-thousand plugins, 18 KB over the wire — and ships its column names with the
+`/api/v1/index` returns positional rows to stay small — 113 KB for the current
+thousand plugins, 22 KB over the wire — and ships its column names with the
 payload:
 
 ```json
