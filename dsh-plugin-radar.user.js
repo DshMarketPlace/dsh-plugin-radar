@@ -373,6 +373,12 @@
       const entries = byRepo.get(key);
       if (!entries) continue;
 
+      // A repository card links to itself four or five times — the avatar, the
+      // wrapping article, the tab strip. Only the anchor that actually names
+      // the repository gets a mark, or every card grows a row of them.
+      const label = anchor.textContent.trim().toLowerCase();
+      if (!label || !label.includes(key.split("/")[1])) continue;
+
       anchor.dataset.dshr = "1";
       anchor.after(chip(entries[0]));
     }
