@@ -1,0 +1,42 @@
+{
+    "total": 1,
+    "count": 1,
+    "results": [
+        {
+            "fullName": "liustack/modlens",
+            "name": "modlens",
+            "owner": "liustack",
+            "repo": "modlens",
+            "subpath": null,
+            "summary": "Vision bridge for text-only models: paste an image, get structured JSON evidence (OCR, layout, semantics).",
+            "summaryZh": "\u4e3a\u7eaf\u6587\u672c\u6a21\u578b\u67b6\u8d77\u89c6\u89c9\u6865\u6881\uff1a\u7c98\u8d34\u56fe\u7247\uff0c\u8f93\u51fa\u7ed3\u6784\u5316 JSON \u8bc1\u636e\uff08OCR\u3001\u7248\u9762\u3001\u8bed\u4e49\uff09\u3002",
+            "category": "vision",
+            "language": "TypeScript",
+            "license": "MIT",
+            "stars": 2325,
+            "pushedAt": "2026-08-16T15:43:27.000Z",
+            "repoUrl": "https://github.com/liustack/modlens",
+            "npmPackage": "@liustack/modlens",
+            "installKind": "npm",
+            "install": "dsh plugin --profile web add @liustack/modlens",
+            "installable": true,
+            "installOptions": [
+                {
+                    "label": "npm",
+                    "cmd": "dsh plugin --profile web add @liustack/modlens",
+                    "note": "Resolves a published tarball rather than cloning the repository, and installs without any extra setup. Swap `web` for your profile name if you run another one."
+                },
+                {
+                    "label": "GitHub",
+                    "cmd": "dsh plugin --profile web add github:liustack/modlens",
+                    "note": "Installing from GitHub runs the project's build script, which pnpm blocks until you allowlist it \u2014 run the command once and pnpm prints the exact key to add under `allowBuilds` in ~/.dsh/profiles/web/pnpm-workspace.yaml."
+                }
+            ],
+            "riskFlags": [
+                "terminal surface"
+            ],
+            "inRegistry": true,
+            "url": "https://dshmarketplace.dev/plugins/liustack-modlens"
+        }
+    ]
+}

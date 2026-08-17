@@ -1,0 +1,70 @@
+{
+  "generated": "2026-08-17T08:20:23.009Z",
+  "count": 8,
+  "site": "https://dshmarketplace.dev",
+  "fields": [
+    "fullName",
+    "category",
+    "install",
+    "path",
+    "npm"
+  ],
+  "plugins": [
+    [
+      "volcengine/OpenViking#examples/dsh-memory-plugin",
+      "memory",
+      null,
+      "/plugins/volcengine-openviking-examples-dsh-memory-plugin",
+      null
+    ],
+    [
+      "liustack/modlens",
+      "vision",
+      "dsh plugin --profile web add @liustack/modlens",
+      "/plugins/liustack-modlens",
+      "@liustack/modlens"
+    ],
+    [
+      "omdsh-dev/DSH-better-sidebar",
+      "ui",
+      "dsh plugin --profile web add dsh-better-sidebar",
+      "/plugins/omdsh-dev-dsh-better-sidebar",
+      "dsh-better-sidebar"
+    ],
+    [
+      "vectorize-io/hindsight#coding-agents",
+      "memory",
+      null,
+      "/plugins/vectorize-io-hindsight-coding-agents",
+      null
+    ],
+    [
+      "zhu1090093659/dsh-web-ui#packages/dsh-web-ui-all",
+      "ui",
+      null,
+      "/plugins/zhu1090093659-dsh-web-ui-packages-dsh-web-ui-all",
+      null
+    ],
+    [
+      "strukto-ai/mirage#dsh",
+      "dev",
+      null,
+      "/plugins/strukto-ai-mirage-dsh",
+      null
+    ],
+    [
+      "ccch1mneyyy/dsh-TUI",
+      "ui",
+      "dsh plugin --profile web add @deepseek-harness-tui/dsh-tui",
+      "/plugins/ccch1mneyyy-dsh-tui",
+      "@deepseek-harness-tui/dsh-tui"
+    ],
+    [
+      "Small-tailqwq/dsh-deep-whale#maid-atelier",
+      "theme",
+      null,
+      "/plugins/small-tailqwq-dsh-deep-whale-maid-atelier",
+      null
+    ]
+  ]
+}
