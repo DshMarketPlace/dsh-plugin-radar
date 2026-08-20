@@ -9,6 +9,7 @@
   <a href="https://dshmarketplace.dev/api/v1/index"><img alt="目录" src="https://img.shields.io/badge/%E7%9B%AE%E5%BD%95-3%2C400%2B%20%E4%B8%AA%E6%8F%92%E4%BB%B6-6b6055?style=flat-square"></a>
   <img alt="依赖" src="https://img.shields.io/badge/%E4%BE%9D%E8%B5%96-%E6%97%A0-6b6055?style=flat-square">
   <img alt="构建" src="https://img.shields.io/badge/%E6%9E%84%E5%BB%BA%E6%AD%A5%E9%AA%A4-%E6%97%A0-6b6055?style=flat-square">
+  <a href="https://linux.do"><img src="https://img.shields.io/badge/LINUX%20DO-community-c0561d?style=flat-square&labelColor=241f1a" alt="LINUX DO"></a>
 </p>
 
 <p align="center">
@@ -120,6 +121,19 @@ pnpm，pnpm 把 `#` 后面的东西当 git ref，`github:owner/repo#packages/thi
 Issue 和 PR 都欢迎。如果是某个插件没被收录、或者条目写错了，那属于
 [marketplace 仓库](https://github.com/DshMarketPlace/dshmarketplace)
 或者[提交表单](https://dshmarketplace.dev/zh/submit) —— 数据在那边，不在这。
+
+## 联系
+
+- **社区** —— [LINUX DO](https://linux.do)
+- **问题反馈** —— [GitHub Issues](https://github.com/DshMarketPlace/dsh-plugin-radar/issues)
+
+## 致谢
+
+- [**LINUX DO**](https://linux.do) —— DSH 生态实际上是在这里被讨论的，这个
+  项目也在这里发布和收反馈。作者本人在 LINUX DO 发过帖的插件，在目录里会带
+  一个认证标记。
+- [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)
+  （CC0-1.0）—— 目录的收录种子来自这里。
 
 ## 授权
 
