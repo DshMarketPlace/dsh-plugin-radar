@@ -6,7 +6,7 @@
   <a href="https://greasyfork.org/scripts/591735-dsh-plugin-radar"><img alt="Greasy Fork" src="https://img.shields.io/badge/Greasy%20Fork-install-c0561d?style=flat-square"></a>
   <a href="dsh-plugin-radar.user.js"><img alt="Version" src="https://img.shields.io/badge/version-1.0.0-241f1a?style=flat-square"></a>
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-241f1a?style=flat-square"></a>
-  <a href="https://dshmarketplace.dev/api/v1/index"><img alt="Catalogue" src="https://img.shields.io/badge/catalogue-1%2C000%2B%20plugins-6b6055?style=flat-square"></a>
+  <a href="https://dshmarketplace.dev/api/v1/index"><img alt="Catalogue" src="https://img.shields.io/badge/catalogue-3%2C400%2B%20plugins-6b6055?style=flat-square"></a>
   <img alt="Dependencies" src="https://img.shields.io/badge/dependencies-none-6b6055?style=flat-square">
   <img alt="Build" src="https://img.shields.io/badge/build%20step-none-6b6055?style=flat-square">
 </p>
@@ -49,10 +49,17 @@ plugin gets a small `DSH` mark. Hover it for the install command.
 appears above npm's own `npm i`, because `npm i` does not install a plugin into
 the harness.
 
-**Monorepo plugins get told the truth.** A plugin in a subdirectory has no
-one-line install at all: `dsh plugin add` forwards to pnpm, and pnpm reads
-everything after `#` as a git ref, so `github:owner/repo#packages/thing` cannot
-resolve. The card says so instead of printing a command that fails.
+**Monorepo plugins get told the truth.** The obvious command does not work:
+`dsh plugin add` forwards to pnpm, pnpm reads everything after `#` as a git ref,
+and `github:owner/repo#packages/thing` fails with `Could not resolve
+packages/thing to a commit`. Rather than print a command that fails, the card
+says so.
+
+There *is* a form that resolves — pnpm splits the fragment on `::` and treats a
+`path:` part as a subdirectory, so `github:owner/repo#path:packages/thing`
+installs, verified end to end. The catalogue does not publish it yet, so the
+card does not either. When it does, this script gets it for free: the command
+comes from the API, not from here.
 
 ## Install
 
@@ -91,8 +98,8 @@ Both endpoints are public, CORS-open and free to use.
 | [`/api/v1/index`](https://dshmarketplace.dev/api/v1/index) | Every listing, five columns, one request — [example](docs/example-index.json) |
 | [`/api/v1/plugins?q=`](https://dshmarketplace.dev/api/v1/plugins?q=modlens) | The full record for one plugin — [example](docs/example-plugin.json) |
 
-`/api/v1/index` returns positional rows to stay small — 113 KB for the current
-thousand plugins, 22 KB over the wire — and ships its column names with the
+`/api/v1/index` returns positional rows to stay small — 375 KB for the current
+3,417 plugins, 68 KB over the wire — and ships its column names with the
 payload:
 
 ```json

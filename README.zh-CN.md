@@ -6,7 +6,7 @@
   <a href="https://greasyfork.org/scripts/591735-dsh-plugin-radar"><img alt="Greasy Fork" src="https://img.shields.io/badge/Greasy%20Fork-%E5%AE%89%E8%A3%85-c0561d?style=flat-square"></a>
   <a href="dsh-plugin-radar.user.js"><img alt="版本" src="https://img.shields.io/badge/%E7%89%88%E6%9C%AC-1.0.0-241f1a?style=flat-square"></a>
   <a href="LICENSE"><img alt="授权" src="https://img.shields.io/badge/%E6%8E%88%E6%9D%83-MIT-241f1a?style=flat-square"></a>
-  <a href="https://dshmarketplace.dev/api/v1/index"><img alt="目录" src="https://img.shields.io/badge/%E7%9B%AE%E5%BD%95-1%2C000%2B%20%E4%B8%AA%E6%8F%92%E4%BB%B6-6b6055?style=flat-square"></a>
+  <a href="https://dshmarketplace.dev/api/v1/index"><img alt="目录" src="https://img.shields.io/badge/%E7%9B%AE%E5%BD%95-3%2C400%2B%20%E4%B8%AA%E6%8F%92%E4%BB%B6-6b6055?style=flat-square"></a>
   <img alt="依赖" src="https://img.shields.io/badge/%E4%BE%9D%E8%B5%96-%E6%97%A0-6b6055?style=flat-square">
   <img alt="构建" src="https://img.shields.io/badge/%E6%9E%84%E5%BB%BA%E6%AD%A5%E9%AA%A4-%E6%97%A0-6b6055?style=flat-square">
 </p>
@@ -45,9 +45,15 @@ README —— 每个指向目录内插件的链接后面都会跟一个小小的
 **npm 包页** —— 如果这个包是 DSH 插件，DSH 命令会出现在 npm 自己那句 `npm i` 上面。
 `npm i` 装不进 harness 里。
 
-**monorepo 里的插件，实话实说。** 装在子目录里的插件根本没有一行命令能装：`dsh plugin add`
-转发给 pnpm，pnpm 把 `#` 后面的东西当 git ref，所以 `github:owner/repo#packages/thing`
-解析不了。卡片会直接说明这一点，而不是给你一条跑不通的命令。
+**monorepo 里的插件，实话实说。** 想当然的那条命令是跑不通的：`dsh plugin add` 转发给
+pnpm，pnpm 把 `#` 后面的东西当 git ref，`github:owner/repo#packages/thing` 会以
+`Could not resolve packages/thing to a commit` 失败。卡片会直接说明这一点，而不是给你一条
+跑不通的命令。
+
+但确实**有**一种写法能解析：pnpm 会把 fragment 按 `::` 拆开，其中 `path:` 那段当子目录处
+理，所以 `github:owner/repo#path:packages/thing` 是能装上的，已经端到端验证过。catalogue
+现在还没开始发这种命令，所以卡片也不发。等它开始发了，这个脚本自动就有了 —— 命令是从 API
+来的，不是写在这里的。
 
 ## 安装
 
@@ -82,7 +88,7 @@ README —— 每个指向目录内插件的链接后面都会跟一个小小的
 | [`/api/v1/index`](https://dshmarketplace.dev/api/v1/index) | 全部条目，五列，一个请求搞定 —— [示例](docs/example-index.json) |
 | [`/api/v1/plugins?q=`](https://dshmarketplace.dev/api/v1/plugins?q=modlens) | 单个插件的完整记录 —— [示例](docs/example-plugin.json) |
 
-`/api/v1/index` 用位置数组返回，为的是小 —— 现在这一千个插件是 113 KB，压过去 22 KB ——
+`/api/v1/index` 用位置数组返回，为的是小 —— 现在这 3,417 个插件是 375 KB，压过去 68 KB ——
 列名跟着 payload 一起发：
 
 ```json
